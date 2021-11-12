@@ -1,42 +1,23 @@
 <template>
-    <Renderer ref="renderer" antialias :orbit-ctrl="{ enableDamping: true }" resize="window">
+    <Renderer ref="renderer">
         <Camera :position="{ z: 10 }" />
         <Scene>
             <PointLight :position="{ y: 50, z: 50 }" />
-            <Box :size="1" ref="box" :rotation="{ y: Math.PI / 4, z: Math.PI / 4 }">
+            <Box ref="box" :rotation="{ y: Math.PI / 4, z: Math.PI / 4 }">
                 <LambertMaterial />
             </Box>
         </Scene>
     </Renderer>
 </template>
 
-<script lang="js">
+<script>
     export default {
         mounted() {
             const renderer = this.$refs.renderer;
             const box = this.$refs.box.mesh;
-            // this.$ref.renderer.three.setSize(500, 500)
             renderer.onBeforeRender(() => {
                 box.rotation.x += 0.01;
             });
         },
     };
 </script>
-
-<style>
-    body,
-    html {
-        margin: 0;
-    }
-
-    html,
-    body,
-    body>div,
-    body>div>div {
-        height: 100%;
-    }
-
-    canvas {
-        display: block;
-    }
-</style>

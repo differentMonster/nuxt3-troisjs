@@ -26,4 +26,10 @@ Build the application for production:
 yarn build
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+## Logs
+
+Troisjs plugins
+
+```bash
+yarn build
+```

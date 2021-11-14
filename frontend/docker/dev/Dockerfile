@@ -1,11 +1,13 @@
+# Dockerfile
 FROM node:12.11.1
 
-# update server
+# update and install dependency
 RUN apt-get update
 
-# Copy / Target Main Folder
+# copy / target Main Folder
 COPY . /opt/frontend
 
+# work in folder
 WORKDIR /opt/frontend
 
 # install dependency

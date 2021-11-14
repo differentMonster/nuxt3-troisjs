@@ -15,7 +15,6 @@
         mounted() {
             const renderer = this.$refs.renderer;
             const box = this.$refs.box.mesh;
-            // this.$ref.renderer.three.setSize(500, 500)
             renderer.onBeforeRender(() => {
                 box.rotation.x += 0.01;
             });
@@ -27,13 +26,6 @@
     body,
     html {
         margin: 0;
-    }
-
-    html,
-    body,
-    body>div,
-    body>div>div {
-        height: 100%;
     }
 
     canvas {

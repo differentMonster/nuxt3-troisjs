@@ -11,5 +11,11 @@
   "dependencies": {
     "three": "^0.134.0",
     "troisjs": "^0.3.3"
-  }
+  },
+  "name": "frontend",
+  "description": "We recommend to look at the [documentation](https://v3.nuxtjs.org).",
+  "version": "1.0.0",
+  "main": "nuxt.config.js",
+  "author": "",
+  "license": "ISC"
 }

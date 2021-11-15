@@ -14,7 +14,8 @@ WORKDIR /opt/frontend
 RUN npm install
 
 # set app serving to permissive / assigned
-# ENV HOST 0.0.0.0
+# if you do not specify host, you cannot connect from the host
+ENV HOST 0.0.0.0
 
 # output port
 EXPOSE 3000

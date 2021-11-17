@@ -1,30 +1,23 @@
 import {
     defineNuxtPlugin
 } from "#app";
-import {
-    createTroisJS
-} from "troisjs";
+
 import {
     Box,
     Camera,
     LambertMaterial,
-    MeshPublicInterface,
     PointLight,
     Renderer,
-    RendererPublicInterface,
     Scene
-} from "troisjs/src/export.ts"
+} from "troisjs"
 
-export default defineNuxtPlugin((nuxtApp) => {
-    const TroisJSVuePlugin = createTroisJS({
-        components: {
-            Box,
-            Camera,
-            LambertMaterial,
-            PointLight,
-            Renderer,
-            Scene
-        }
-    })
-    nuxtApp.vueApp.use(TroisJSVuePlugin)
+export default defineNuxtPlugin(({
+    vueApp
+}) => {
+    vueApp.component('Box', Box)
+    vueApp.component('Camera', Camera)
+    vueApp.component('LambertMaterial', LambertMaterial)
+    vueApp.component('PointLight', PointLight)
+    vueApp.component('Renderer', Renderer)
+    vueApp.component('Scene', Scene)
 });

@@ -33,3 +33,6 @@ Troisjs plugins
 ```bash
 yarn build
 ```
+
+note:
+*Model GltfModel is use to import 3D object into the scene, but having error of gtlf problem and renderer

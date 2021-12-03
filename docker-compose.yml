@@ -1,11 +1,11 @@
-version: '3.8'
+# version: '3.8'
 
-services:
-  # Nuxt3
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: docker/dev/Dockerfile
-    command: npm run dev
-    ports:
-      - 3000:3000
+# services:
+#   # Nuxt3
+#   frontend:
+#     build:
+#       context: ./frontend
+#       dockerfile: docker/dev/Dockerfile
+#     command: npm run dev
+#     ports:
+#       - 3000:3000
